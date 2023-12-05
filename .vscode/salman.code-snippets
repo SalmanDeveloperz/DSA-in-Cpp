@@ -1,0 +1,18 @@
+{
+	"salman": {
+	  "prefix": "salman",
+	  "body": [
+		"#include<iostream>",
+		"using namespace std;",
+		"$0",
+		"int main(){",
+		"    system(\"CLS\");",
+		"  ",
+		"  ",
+		"    return 0;",
+		"}"
+	  ],
+	  "description": "salman"
+	}
+  }
+  
