@@ -1,0 +1,38 @@
+//Q1: Print following pattern with using any loop.
+// * * * * * 
+// * * * * 
+// * * * 
+// * * 
+// * 
+// * 
+// * * 
+// * * * 
+// * * * * 
+// * * * * * 
+
+
+//Logic Approah >>>>Divide pattern into 2 parts (nested loops), Print first portion and then second.
+#include<iostream>
+using namespace std;
+int main(){
+    system("CLS");
+    int n;
+    cout<<"Enter number maximum number: ";
+    cin>>n;
+
+    for(int k=1; k<=n; k++){
+        for(int L=k; L<=n; L++){
+            cout<<"*" <<" ";
+        }
+        cout<<endl;
+    }
+
+    for(int k=1; k<=n; k++){
+        for(int L=1; L<=k; L++){
+            cout<<"*" <<" ";
+        }
+        cout<<endl;
+    }
+    
+    return 0;
+}
