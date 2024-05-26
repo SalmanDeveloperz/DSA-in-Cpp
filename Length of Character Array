@@ -1,0 +1,46 @@
+//Mine Code
+#include<iostream>
+using namespace std;
+int main(){
+    system("CLS");
+    char ch[20];
+    cout<<"Enter name: ";
+
+    cin>>ch;
+    cout<<"Name is: "<<ch<<"\n";
+    int count=0;
+    for(int i=1; i<20; i++){
+        if(ch[i]!='\0'){
+            count++;
+        }
+    }
+    
+    cout<<"The length is: "<<count;
+    
+
+    return 0;
+}
+
+
+//// Babbar Video
+// #include<iostream>
+// using namespace std;
+// int getLength(char arr[]){
+//     int count= 0;
+//     for(int i=0; arr[i]!='\0'; i++){
+//         count ++;
+//     }
+//     return count;
+
+// }
+// int main(){
+//     system("CLS");
+//     char ch[20];
+//     cout<<"Enter name: ";
+//     cin>>ch;
+        
+//     cout<<"The length is: "<<getLength(ch);
+    
+
+//     return 0;
+// }
