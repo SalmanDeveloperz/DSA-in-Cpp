@@ -1,0 +1,64 @@
+//PRACTISE BY OWN
+
+#include<iostream>
+using namespace std;
+
+char toLowercase(char ch){
+    
+    if(ch>='a' && ch<='z'){
+        return ch;
+    }
+    else{
+        // int temp=ch-'A'+'a';     //1st formula
+        // int temp= ch+32;         //2nd formula
+        // return temp;
+
+
+         // third Method
+         return ch |' ';              //Convert upper to lower
+        // return ch&'_';             //Convert lower to upper
+    }
+}
+
+
+
+bool isPalindrome(string str){
+    int s=0;
+    int e=str.size()-1;
+    while(s<e){
+
+        // while(str[s]>=1 && str[s]<=9  || str[e]>=1 && str[e]<=9){
+        //     s++;
+        //     e--;
+        // }
+        
+        if(toLowercase(str[s])==toLowercase(str[e])){
+            s++;
+            e--;
+        }
+        
+        else{
+            return false;
+        }
+    }
+    return true;
+}
+
+
+int main(){
+    system("CLS");
+    char ch[100];
+    cout<<"Enter the word to check palindrome: ";
+    cin>>ch;
+
+    if(isPalindrome(ch)){
+        cout<<"yes it is palindrome!!!!";
+    }
+    else{
+        cout<<"Not palindrome!!!!!";
+    }
+
+    cout<<"\nCharacter is:" << toLowercase('c');
+    cout<<"\nCharacter is:" << toLowercase('Z');
+    return 0;
+}
