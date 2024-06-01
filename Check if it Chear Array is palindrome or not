@@ -1,0 +1,46 @@
+// Q: CHECK IF THE STRING CHARACTER ARRAY IS PALINDROME OR NOT??
+
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+// bool isPalindrome(string str){           // for string there no need to get size =>>>> int e=str.size();
+
+    bool isPalindrome(char str[] , int size){       // for Char we need to pass length parameter or use library cstring
+
+    int check=-1;
+    int s=0;
+    int e=size-1;
+    while(s<e){
+        if(str[s]== str[e]){
+            s++;
+            e--;
+            // return true;         // check only the first and last index then go out from loop that's what avoid to it
+        }
+        else{
+            return false;
+
+        }
+    }
+
+    return true;
+}
+
+
+int main(){
+    system("CLS");
+    char string[100];
+    cout<<"Enter a String Array: ";
+    cin>>string;
+
+    int len = strlen(string);       //Use cstring library for it
+    if(isPalindrome(string, len)){
+        cout<<"Yep this is palindrome!!!";
+    }
+    else{
+        cout<<"Not palindrome!!!";
+    }    
+    
+    return 0;
+}
