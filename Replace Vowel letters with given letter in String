@@ -1,0 +1,27 @@
+// Q: Replace Vowel letters with given letter in String
+
+#include<iostream>
+using namespace std;
+
+void replace_vowels(string &s, char c){
+    for(int i=0; i<s.size(); i++){
+        if(s[i]=='a' || s[i]=='e' || s[i]=='i' || s[i]=='o' || s[i]=='u'){
+            s[i]=c;
+        }
+        
+    }
+} 
+int main(){
+    system("CLS");
+    string str;
+    char character;
+    cout<<"Enter a string: ";
+    cin>>str;
+    cout<<"\n Enter a character to fit in place of Vowel letter: ";
+    cin>>character;
+
+
+    replace_vowels(str, character);
+        cout<<"Finally result is: "<<str;
+    return 0;
+}
