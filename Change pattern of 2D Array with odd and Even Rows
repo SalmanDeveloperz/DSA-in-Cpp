@@ -1,0 +1,39 @@
+// Q: Change pattern of 2D Array with odd and Even Rows 
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    system("CLS");
+    int arr[3][3];
+    cout << "Enter the array: ";
+
+    // Input
+    for (int row = 0; row < 3; row++) {
+        for (int col = 0; col < 3; col++) {
+            cin >> arr[row][col];
+        }
+    }
+
+
+    // Output
+
+    for (int col = 0; col < 3; col++) {
+        if(col &1){          // For odd Row Number
+            for(int row=2; row>=0; row--){
+                cout<<arr[row][col]<<" ";
+            }
+            // cout<<"\n";
+        }
+        else{      //For Even
+            for (int row = 0; row < 3; row++) {
+                cout<< arr[row][col]<< " ";     // value of first index [] remain same the value of second index is updated in each iteration[*]
+            }
+            // cout<<"\n";
+
+        }
+        cout<<endl;
+        
+    }
+  
+}
