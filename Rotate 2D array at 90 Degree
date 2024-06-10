@@ -1,0 +1,61 @@
+// Q: Rotate 2D array at 90 Degree
+
+#include<iostream>
+using namespace std;
+
+void input(int (&arr)[][3]){
+    cout<<"Enter an array: ";
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+        cin>>arr[i][j];
+        }
+    }
+}
+
+void output( int (&arr)[][3] ){
+     for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            cout<<arr[i][j]<<" ";
+            // array=arr[i][j];
+        }
+        cout<<"\n";
+    }
+    cout<<"\n";
+}
+
+void out( int (&arr)[][3] ){
+
+    // Step 1: Transpose the matrix
+    for (int i = 0; i < 3; i++) {
+        for (int j = i + 1; j < 3; j++) {
+            swap(arr[i][j], arr[j][i]);
+        }
+    }
+
+    // Step 2: Reverse each row
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3 / 2; j++) {   // j<n/2 because we have to swap the rows until the mid point
+            swap(arr[i][j], arr[i][3 - j - 1]); // [n-j-1] index mean the total- current index- 1 (which is last index)
+        }
+    }
+
+    
+}
+
+
+int main(){
+    system("CLS");
+    int arr[3][3];
+    
+    input(arr);         // Taking input 
+    cout<<"The result in 2D Array is:\n";
+    output(arr);        // Showing input in 2D form 
+    cout<<"Calling Rotate 90 degree!!!\n";
+    out(arr);           // Turn it to 90 degree rotation
+    output(arr);        //Output of Rotation
+
+
+    
+// Happy learning 
+    return 0;
+}
