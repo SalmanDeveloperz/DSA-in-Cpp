@@ -1,0 +1,50 @@
+// Q: Taking Transpose of the 2D array
+
+#include<iostream>
+using namespace std;
+
+void input(int (&arr)[][3]){
+    cout<<"Enter an array: ";
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+        cin>>arr[i][j];
+        }
+    }
+}
+
+void output( int (&arr) [][3] ){
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            cout<<arr[i] [j]<<" ";
+        }
+        cout<<"\n";
+    }
+}
+
+void transpose( int (&arr)[][3] ){
+     for(int i=0; i<3; i++){
+        for(int j=i+1; j<3; j++){
+            swap( arr[i][j], arr[j][i]);
+        }
+    }
+    cout<<"\n";
+}
+
+
+
+int main(){
+    system("CLS");
+    int arr[3][3];
+    
+    input(arr);         // Taking input 
+    cout<<"The result in 2D Array is:\n";
+    output(arr);        // Showing input in 2D form 
+    cout<<"Taking transpose of the matrix:- \n";
+    transpose(arr);           // Turn it to 90 degree rotation
+    output(arr);        //Output of Rotation
+
+
+    
+// Happy learning 
+    return 0;
+}
