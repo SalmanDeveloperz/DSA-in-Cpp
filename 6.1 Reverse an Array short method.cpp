@@ -6,7 +6,7 @@ int main(){
     int n=5;
     int temp=n;
     for(int i=1;i<=n;i++){
-        cout<<i<<"\t"<<temp<<"\n";
+        cout<<i<<"\t"<<temp <<"\n";
         temp--;
     }
     return 0;
