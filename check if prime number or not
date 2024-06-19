@@ -1,0 +1,71 @@
+// #include<iostream>
+// using namespace std;
+
+// bool isPrime(int num){
+//     if(num<=1){
+//         return false;
+//     }
+//     for(int i=2; i<num; i++){
+//         if(num%i==0){
+//             return false;
+//         }
+//     }
+//    return true;
+
+
+// }
+// int main(){
+//     system("CLS");
+//     int n;
+//     cout<<"Enter number: ";
+//     cin>>n;
+//     // isPrime(n);
+//     if(isPrime(n)){
+//         cout<<"Prime Number\n";
+//     }
+//     else{
+//         cout<<"Not a Prime Number";
+//     }
+
+    
+
+//     return 0;
+// }
+
+
+
+
+
+#include<iostream>
+using namespace std;
+
+bool isPrime(int num){
+    if(num<=1){
+        return false;
+    }
+    for(int i=2; i<num; i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+   return true;
+
+
+}
+int main(){
+    system("CLS");
+    int n;
+    cout<<"Enter number: ";
+    cin>>n;
+    // isPrime(n);
+    if(isPrime(n)){
+        cout<<"Prime Number\n";
+    }
+    else{
+        cout<<"Not a Prime Number";
+    }
+
+    
+
+    return 0;
+}
