@@ -34,5 +34,4 @@ This repository is designed to help you enhance your understanding of data struc
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/SalmanDeveloperz/dsa-repository.git
-   
+   git clone https://github.com/SalmanDeveloperz/DSA-in-Cpp.git   
