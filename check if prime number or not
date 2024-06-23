@@ -1,3 +1,5 @@
+//Simple Prime numbers code
+
 // #include<iostream>
 // using namespace std;
 
@@ -50,22 +52,25 @@ bool isPrime(int num){
     }
    return true;
 
-
 }
+
+int totalPrime(int num){
+int count=0;
+    for(int i=2; i<num ;i++){
+        if(isPrime(i)){
+            count++;
+        }
+    }
+    return count;
+}
+
+
 int main(){
     system("CLS");
     int n;
-    cout<<"Enter number: ";
+    cout<<"Enter number until you want to get prime numbers: ";
     cin>>n;
-    // isPrime(n);
-    if(isPrime(n)){
-        cout<<"Prime Number\n";
-    }
-    else{
-        cout<<"Not a Prime Number";
-    }
-
-    
-
+    int total= totalPrime(n);
+    cout<<"Total number of Prime numbers until "<<n<<" are: "<<total<<"\n";
     return 0;
 }
