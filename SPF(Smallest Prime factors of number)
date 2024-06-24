@@ -1,0 +1,51 @@
+//// SPF(Smallest Prime factors of number)
+//Like the smallest factors of 20 are (2,2,5) ---- 20/2=10 > 10/2=5 >  5/5=1
+
+
+//APPROACH
+/*  > Assign Every SPF number itself like the spf of 2 is 2 and 3 is itself 3
+    > Check if any element is uniitilized
+    > check if there's already marked any number like 12 is already marked by 2 So no need to mark by 3 (Simply mark the previous 2)
+    > Run a loop until the remainder is not 1 
+    > Devide the number by SPF to take LCM
+*/
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+void Factor(int n){
+    // vector<bool> spf(n, false);
+    int spf[100]={0};
+    for(int i=2; i<=n; i++){
+        spf[i]=i;
+    }
+    for(int i=2; i<=n; i++){
+        if(spf[i]==i){
+            for(int j=i*i; j<=n; j+=i){
+                if(spf[j]==j){    //check if there's already marked any number like 12 is already marked by 2 So no need to mark by 3 (Simply mark the previous 2)
+
+                    spf[j]=i;  
+                }    
+            }
+        }
+    }
+    
+    while(n!=1){    // Run loop until the remainder is not 0;
+        cout<<spf[n]<<" ";
+        n=n/spf[n];  // update the number by SPF
+    }
+
+}
+
+
+
+int main(){
+    system("CLS");
+    int n;
+    cout<<"Number? :";
+    cin>>n;
+    Factor(n);
+ 
+    return 0;
+}
