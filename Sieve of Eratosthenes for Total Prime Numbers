@@ -1,0 +1,38 @@
+// Prime numbers Using Sieve of Eratosthenes.
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int totalPrime(int num){
+    int count=0;
+    // vector<bool> prime(num+1, true);
+    int prime[100]={0};
+    prime[0]=prime[1]=false;
+    for(int i=2; i*i<num ;i++){
+        if(prime[i]==0){
+
+            for(int j=i*i; j<num; j+=i){
+                prime[j]=1;
+            }
+        }
+    }
+
+    for(int i=2; i<num; i++){   
+        if(prime[i]==0){
+            count++;
+        }
+    }
+
+    return count;
+}
+
+
+int main(){
+    system("CLS");
+    int n;
+    cout<<"Enter number until you want to get prime numbers: ";
+    cin>>n;
+    int total= totalPrime(n);
+    cout<<"Total number of Prime numbers until "<<n<<" are: "<<total<<"\n";
+    return 0;
+}
