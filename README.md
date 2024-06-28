@@ -28,7 +28,7 @@ This repository is designed to help you enhance your understanding of data struc
 - **C++ Problems/**: Contains C++ coding problems and solutions.
 - **LeetCode/**: Solutions to various LeetCode problems categorized by difficulty.
 - **Data Structures/**: Implementation and explanation of fundamental data structures.
-- **Algorithms/**: Explanation and implementation of common algorithms.
+- **Algorithms/**: Explanation and implementation of common algorithms are here.
 
 ## Usage
 
