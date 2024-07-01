@@ -1,0 +1,20 @@
+//Q: Swap two numbers using pointers
+
+#include<iostream>
+using namespace std;
+int main(){
+    system("CLS");
+    int a,b;
+    cout<<"Numbers?\n";
+    cin>>a>>b;
+    int *ptr1= &a;
+    int *ptr2= &b;
+
+    *ptr1=*ptr1+ *ptr2;
+    *ptr2=*ptr1- *ptr2;
+    *ptr1=*ptr1- *ptr2;
+    cout<<"After swaping!!!!!\n";
+    cout<<a<<"\n"<<b;
+
+    return 0;
+}
