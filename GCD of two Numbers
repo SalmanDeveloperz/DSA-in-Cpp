@@ -1,0 +1,38 @@
+//Q: gcd of two numbers
+
+#include<iostream>
+using namespace std;
+
+int GCD(int fN, int sN){
+    if(fN==0){
+        return fN;
+
+    }
+    if(sN==0){
+        return sN;
+    }
+    
+    while(fN!=0 && sN!=0){
+        if(fN > sN){
+            fN=fN-sN;
+        }
+        else{
+            sN=sN-fN;
+        }
+        
+    }
+    return fN ;
+}
+int main(){
+    system("CLS");
+    int a, b;
+    cout<<"Enter first number: ";
+    cin>>a;
+    cout<<"Enter second number: ";
+    cin>>b;
+    int gcd= GCD(a,b);
+    cout<<"GCD of "<<a<<" and "<< b<< " is "<< gcd;
+    
+
+    return 0;
+}
