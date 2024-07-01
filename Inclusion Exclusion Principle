@@ -1,0 +1,27 @@
+//Inclusion Exclusion Principle
+#include<iostream>
+using namespace std;
+int Inclusion_Exclusion(int n, int a, int b){
+    int c1= n/a;
+    int c2=n/b;
+    int c3=n/(a*b);
+    int answer= c1+c2-c3;
+    return answer;
+
+
+}
+
+
+int main(){
+    system("CLS");
+    int n, a, b;
+    cout<<"Enter number: ";
+    cin>>n;
+    cout<<"Enter numbers that check divisible:\n";
+    cin>>a>>b;
+    int answer= Inclusion_Exclusion(n,a,b);
+    cout<<"Total numbers are: "<<answer;
+    
+
+    return 0;
+}
